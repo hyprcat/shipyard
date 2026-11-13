@@ -1,0 +1,27 @@
+{
+  "name": "shipyard",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.31.0",
+  "scripts": {
+    "db:generate": "pnpm --filter @shipyard/db db:generate",
+    "db:migrate": "pnpm --filter @shipyard/db db:migrate",
+    "build": "tsx scripts/validate-workspaces.ts build && turbo run build",
+    "lint": "tsx scripts/validate-workspaces.ts lint && eslint . && prettier --check . && turbo run lint",
+    "test": "tsx scripts/validate-workspaces.ts test && vitest run --passWithNoTests && turbo run test",
+    "typecheck": "tsx scripts/validate-workspaces.ts typecheck && tsc -p tsconfig.json --noEmit && turbo run typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.5",
+    "@types/pg": "^8.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.56.1",
+    "@typescript-eslint/parser": "^8.56.1",
+    "drizzle-kit": "^0.31.9",
+    "eslint": "^10.0.3",
+    "prettier": "^3.8.1",
+    "tsx": "^4.21.0",
+    "turbo": "^2.8.14",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}

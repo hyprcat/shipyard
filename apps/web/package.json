@@ -1,0 +1,29 @@
+{
+  "name": "@shipyard/web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --host 0.0.0.0",
+    "lint": "tsx ../../scripts/workspace-task.ts lint",
+    "test": "tsx ../../scripts/workspace-task.ts test",
+    "typecheck": "tsx ../../scripts/workspace-task.ts typecheck"
+  },
+  "dependencies": {
+    "@shipyard/ui": "workspace:*",
+    "@tanstack/react-query": "^5.90.21",
+    "@vitejs/plugin-react": "^5.1.4",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.1",
+    "vite": "^7.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "jsdom": "^28.1.0"
+  }
+}

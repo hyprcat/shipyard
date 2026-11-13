@@ -1,0 +1,21 @@
+{
+  "name": "@shipyard/ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "scripts": {
+    "build": "tsx ../../scripts/workspace-task.ts build",
+    "lint": "tsx ../../scripts/workspace-task.ts lint",
+    "test": "tsx ../../scripts/workspace-task.ts test",
+    "typecheck": "tsx ../../scripts/workspace-task.ts typecheck"
+  },
+  "dependencies": {
+    "react": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "react-dom": "^19.2.4"
+  }
+}

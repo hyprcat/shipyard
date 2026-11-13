@@ -1,0 +1,19 @@
+{
+  "name": "@shipyard/db",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "scripts": {
+    "build": "tsx ../../scripts/workspace-task.ts build",
+    "db:generate": "drizzle-kit generate --config drizzle.config.ts",
+    "db:migrate": "tsx src/migrate-cli.ts",
+    "lint": "tsx ../../scripts/workspace-task.ts lint",
+    "test": "tsx ../../scripts/workspace-task.ts test",
+    "typecheck": "tsx ../../scripts/workspace-task.ts typecheck"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.1",
+    "pg": "^8.20.0"
+  }
+}

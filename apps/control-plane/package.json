@@ -1,0 +1,22 @@
+{
+  "name": "@shipyard/control-plane",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "tsx ../../scripts/workspace-task.ts build",
+    "lint": "tsx ../../scripts/workspace-task.ts lint",
+    "test": "tsx ../../scripts/workspace-task.ts test",
+    "typecheck": "tsx ../../scripts/workspace-task.ts typecheck"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "@fastify/cors": "^11.2.0",
+    "@shipyard/config": "workspace:*",
+    "@shipyard/db": "workspace:*",
+    "argon2": "^0.44.0",
+    "drizzle-orm": "^0.45.1",
+    "fastify": "^5.8.2",
+    "fastify-plugin": "^5.1.0",
+    "pg": "^8.20.0"
+  }
+}
